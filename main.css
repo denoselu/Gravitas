@@ -1117,3 +1117,21 @@ p {
     margin-top: 20px;
   }
 }
+/* Media Query for Mobile Devices */
+@media (max-width: 767px) {
+  .heroes-section {
+    height: auto; /* Reset the fixed height on smaller screens */
+    padding: 40px 20px; /* Adjust padding */
+  }
+
+  .heroes-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .heroes-slideshow {
+    max-width: 100%;
+    margin-top: 30px;
+    height: 300px; /* Set a reasonable fixed height for the slideshow on smaller screens */
+  }
+}
