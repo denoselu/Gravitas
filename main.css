@@ -1135,3 +1135,9 @@ p {
     height: 300px; /* Set a reasonable fixed height for the slideshow on smaller screens */
   }
 }
+/* Media Query for Mobile Devices */
+@media (max-width: 767px) {
+  .screenshot-carousel {
+    display: none; /* Hide the carousel on mobile devices */
+  }
+}
