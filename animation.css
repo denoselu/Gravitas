@@ -1,0 +1,89 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.columns {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  transition: all 0.3s ease;
+  opacity: 0; /* Initially set opacity to 0 */
+  transform: translateY(-50px); /* Initially translate elements up */
+}
+
+.level1 {
+  background-color: #ff9999;
+}
+
+.level2 {
+  background-color: #99ff99;
+}
+
+.level3 {
+  background-color: #9999ff;
+}
+
+.pricing-packages {
+  display: flex;
+  justify-content: space-around;
+}
+
+.package {
+  width: 30%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  opacity: 0; /* Initially set opacity to 0 */
+  transform: translateY(50px); /* Initially translate elements down */
+}
+
+/* Define animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); /* Slide up from top */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Slide to normal position */
+  }
+}
+
+/* Apply animations to individual elements */
+.column,
+.package {
+  animation: slideIn 0.5s ease forwards; /* Apply animation */
+}
+
+.column:hover,
+.package:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.5s ease forwards;
+}
+
+.column:hover,
+.package:hover .join-btn {
+  background-color: #06074d;
+  color: #ffffff;
+  animation: slideIn 0.5s ease forwards;
+}
+
+.join-btn {
+  transition: background-color 0.3s ease;
+}
+.columns {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  text-align: center;
+}

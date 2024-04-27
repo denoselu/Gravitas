@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabibu - Medical Financing App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css"
+    />
+  </head>
+  <body>
+    <div class="flex">
+      <div class="w-1/2 bg-gray-100 p-8">
+        <h1 class="text-3xl font-bold mb-4">Tabibu</h1>
+        <p class="text-gray-600 mb-8">A medical financing app</p>
+        <div class="mb-8">
+          <h2 class="text-xl font-bold mb-2">Registration</h2>
+          <form id="registration-form" class="space-y-4">
+            <div>
+              <label for="full-name" class="block font-medium mb-1"
+                >Full Name</label
+              >
+              <input
+                type="text"
+                id="full-name"
+                name="full-name"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+                required
+              />
+            </div>
+            <div>
+              <label for="id-number" class="block font-medium mb-1"
+                >ID or Passport Number</label
+              >
+              <input
+                type="text"
+                id="id-number"
+                name="id-number"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+                required
+              />
+            </div>
+            <div>
+              <label for="phone-number" class="block font-medium mb-1"
+                >Phone Number</label
+              >
+              <input
+                type="tel"
+                id="phone-number"
+                name="phone-number"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+                required
+              />
+            </div>
+            <div>
+              <label for="email" class="block font-medium mb-1">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+                required
+              />
+            </div>
+            <div>
+              <label for="county" class="block font-medium mb-1">County</label>
+              <select
+                id="county"
+                name="county"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+                required
+              >
+                <option value="">Select County</option>
+                <option value="Baringo">Baringo</option>
+                <option value="Bomet">Bomet</option>
+                <option value="Bungoma">Bungoma</option>
+                <option value="Busia">Busia</option>
+                <option value="Elgeyo-Marakwet">Elgeyo-Marakwet</option>
+                <option value="Embu">Embu</option>
+                <option value="Garissa">Garissa</option>
+                <option value="Homa Bay">Homa Bay</option>
+                <option value="Isiolo">Isiolo</option>
+                <option value="Kajiado">Kajiado</option>
+                <option value="Kakamega">Kakamega</option>
+                <option value="Kericho">Kericho</option>
+                <option value="Kiambu">Kiambu</option>
+                <option value="Kilifi">Kilifi</option>
+                <option value="Kirinyaga">Kirinyaga</option>
+                <option value="Kisii">Kisii</option>
+                <option value="Kisumu">Kisumu</option>
+                <option value="Kitui">Kitui</option>
+                <option value="Kwale">Kwale</option>
+                <option value="Laikipia">Laikipia</option>
+                <option value="Lamu">Lamu</option>
+                <option value="Machakos">Machakos</option>
+                <option value="Makueni">Makueni</option>
+                <option value="Mandera">Mandera</option>
+                <option value="Marsabit">Marsabit</option>
+                <option value="Meru">Meru</option>
+                <option value="Migori">Migori</option>
+                <option value="Mombasa">Mombasa</option>
+                <option value="Muranga">Muranga</option>
+                <option value="Nairobi">Nairobi</option>
+                <option value="Nakuru">Nakuru</option>
+                <option value="Nandi">Nandi</option>
+                <option value="Narok">Narok</option>
+                <option value="Nyamira">Nyamira</option>
+                <option value="Nyandarua">Nyandarua</option>
+                <option value="Nyeri">Nyeri</option>
+                <option value="Samburu">Samburu</option>
+                <option value="Siaya">Siaya</option>
+                <option value="Taita-Taveta">Taita-Taveta</option>
+                <option value="Tana River">Tana River</option>
+                <option value="Tharaka-Nithi">Tharaka-Nithi</option>
+                <option value="Trans Nzoia">Trans Nzoia</option>
+                <option value="Turkana">Turkana</option>
+                <option value="Uasin Gishu">Uasin Gishu</option>
+                <option value="Vihiga">Vihiga</option>
+                <option value="Wajir">Wajir</option>
+                <option value="West Pokot">West Pokot</option>
+              </select>
+            </div>
+            <div>
+              <label for="employment-type" class="block font-medium mb-1"
+                >Employment Type</label
+              >
+              <select
+                id="employment-type"
+                name="employment-type"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+                required
+              >
+                <option value="">Select Employment Type</option>
+                <option value="government">Government Job</option>
+                <option value="ngo">NGO</option>
+                <option value="private-company">Private Company</option>
+                <option value="business">Business</option>
+                <option value="farming">Farming</option>
+                <option value="unemployed">Unemployed</option>
+              </select>
+            </div>
+            <div>
+              <label for="monthly-income" class="block font-medium mb-1"
+                >Monthly Income (Kshs)</label
+              >
+              <input
+                type="number"
+                id="monthly-income"
+                name="monthly-income"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+                required
+              />
+            </div>
+            <div>
+              <label for="password" class="block font-medium mb-1"
+                >Password</label
+              >
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+                required
+              />
+            </div>
+            <button
+              type="submit"
+              class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md"
+            >
+              Create Account
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="w-1/2 bg-white p-8">
+        <div id="login-screen" class="hidden">
+          <h2 class="text-xl font-bold mb-4">Login</h2>
+          <form id="login-form" class="space-y-4">
+            <div>
+              <label for="username" class="block font-medium mb-1"
+                >Username</label
+              >
+              <input
+                type="text"
+                id="username"
+                name="username"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+                required
+              />
+            </div>
+            <div>
+              <label for="password" class="block font-medium mb-1"
+                >Password</label
+              >
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+                required
+              />
+            </div>
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  id="terms-checkbox"
+                  name="terms-checkbox"
+                  class="mr-2"
+                  required
+                />
+                I agree to the
+                <a href="#" class="text-blue-500">Terms and Conditions</a>
+              </label>
+            </div>
+            <button
+              type="submit"
+              class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md"
+            >
+              Login
+            </button>
+          </form>
+        </div>
+        <div id="profile-screen" class="hidden">
+          <h2 class="text-xl font-bold mb-4">Your Profile</h2>
+          <div class="space-y-4">
+            <div>
+              <label for="profile-picture" class="block font-medium mb-1"
+                >Profile Picture</label
+              >
+              <input
+                type="file"
+                id="profile-picture"
+                name="profile-picture"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+              />
+            </div>
+            <div>
+              <label for="id-upload" class="block font-medium mb-1"
+                >Upload ID</label
+              >
+              <input
+                type="file"
+                id="id-upload"
+                name="id-upload"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+              />
+            </div>
+            <button
+              id="save-profile"
+              class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md"
+            >
+              Save Profile
+            </button>
+            <div class="flex justify-between">
+              <a href="#" class="text-blue-500">Settings</a>
+              <a href="#" class="text-blue-500">Logout</a>
+            </div>
+            <a href="#" id="apply-for-loan" class="text-blue-500"
+              >Apply for Loan</a
+            >
+            <div class="flex justify-between">
+              <a href="#" class="text-blue-500">Privacy Policy</a>
+              <a href="#" class="text-blue-500">Terms and Conditions</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="loan-application-screen" class="hidden">
+          <h2 class="text-xl font-bold mb-4">Apply for Loan</h2>
+          <form id="loan-application-form" class="space-y-4">
+            <div>
+              <label for="hospital-number" class="block font-medium mb-1"
+                >Hospital Number</label
+              >
+              <input
+                type="text"
+                id="hospital-number"
+                name="hospital-number"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+                required
+              />
+            </div>
+            <div>
+              <label for="illness-type" class="block font-medium mb-1"
+                >Type of Illness</label
+              >
+              <input
+                type="text"
+                id="illness-type"
+                name="illness-type"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+                required
+              />
+            </div>
+            <div>
+              <label for="treatment-type" class="block font-medium mb-1"
+                >Treatment Type</label
+              >
+              <select
+                id="treatment-type"
+                name="treatment-type"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+                required
+              >
+                <option value="">Select Treatment Type</option>
+                <option value="inpatient">Inpatient</option>
+                <option value="outpatient">Outpatient</option>
+              </select>
+            </div>
+            <div>
+              <label for="prescribed-illness" class="block font-medium mb-1"
+                >Prescribed Illness</label
+              >
+              <textarea
+                id="prescribed-illness"
+                name="prescribed-illness"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+                required
+              ></textarea>
+            </div>
+            <div>
+              <label for="loan-amount" class="block font-medium mb-1"
+                >Loan Amount (Kshs)</label
+              >
+              <input
+                type="number"
+                id="loan-amount"
+                name="loan-amount"
+                class="border border-gray-300 rounded-md px-3 py-2 w-full"
+                required
+              />
+            </div>
+            <div>
+              <label>
+                <input
+                  type="checkbox"
+                  id="terms-checkbox"
+                  name="terms-checkbox"
+                  class="mr-2"
+                  required
+                />
+                I agree to the
+                <a href="#" class="text-blue-500">Terms and Conditions</a>
+              </label>
+            </div>
+            <button
+              type="submit"
+              class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md"
+            >
+              Apply for Loan
+            </button>
+          </form>
+        </div>
+        <div id="loan-result-screen" class="hidden">
+          <h2 class="text-xl font-bold mb-4">Loan Details</h2>
+          <div class="space-y-4">
+            <p>
+              <strong>Loan Amount:</strong>
+              <span id="loan-amount-display"></span>
+            </p>
+            <p>
+              <strong>First Payment Date:</strong>
+              <span id="first-payment-date"></span>
+            </p>
+            <p>
+              <strong>Monthly Installment:</strong>
+              <span id="monthly-installment"></span>
+            </p>
+            <p>
+              <strong>Total Interest:</strong> <span id="total-interest"></span>
+            </p>
+            <p>
+              <strong>Total Payable:</strong> <span id="total-payable"></span>
+            </p>
+            <button
+              id="apply-loan"
+              class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md"
+            >
+              Apply for Loan
+            </button>
+            <div id="loan-processing-message" class="hidden">
+              <p>
+                We are processing your loan. You will get feedback within an
+                hour.
+              </p>
+              <button
+                id="share-link"
+                class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md"
+              >
+                Share Link
+              </button>
+            </div>
+            <div id="loan-processing-screen" class="hidden">
+              <h2 class="text-xl font-bold mb-4">
+                Loan Application Processing
+              </h2>
+              <div class="space-y-4">
+                <p>
+                  We are processing your loan. You will get feedback within an
+                  hour.
+                </p>
+                <button
+                  id="share-link"
+                  class="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md"
+                >
+                  Share Link
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Registration form submission
+      const registrationForm = document.getElementById("registration-form");
+      registrationForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        // Handle registration form submission
+        // ...
+        // Display login scr een
+        document.getElementById("registration-screen").classList.add("hidden");
+        document.getElementById("login-screen").classList.remove("hidden");
+      });
+
+      // Login form submission
+      const loginForm = document.getElementById("login-form");
+      loginForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        // Handle login form submission
+        // ...
+        // Display profile screen
+        document.getElementById("login-screen").classList.add("hidden");
+        document.getElementById("profile-screen").classList.remove("hidden");
+      });
+
+      // Loan application form submission
+      const loanApplicationForm = document.getElementById(
+        "loan-application-form"
+      );
+      loanApplicationForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        // Handle loan application form submission
+        // ...
+        // Calculate loan details and display loan result screen
+        const loanAmount = parseFloat(
+          document.getElementById("loan-amount").value
+        );
+        const loanDetails = calculateLoanDetails(loanAmount);
+        document.getElementById("loan-amount-display").textContent =
+          loanDetails.loanAmount;
+        document.getElementById("first-payment-date").textContent =
+          loanDetails.firstPaymentDate;
+        document.getElementById("monthly-installment").textContent =
+          loanDetails.monthlyInstallment;
+        document.getElementById("total-interest").textContent =
+          loanDetails.totalInterest;
+        document.getElementById("total-payable").textContent =
+          loanDetails.totalPayable;
+        document
+          .getElementById("loan-application-screen")
+          .classList.add("hidden");
+        document
+          .getElementById("loan-result-screen")
+          .classList.remove("hidden");
+      });
+
+      // Function to calculate loan details based on loan amount
+      function calculateLoanDetails(loanAmount) {
+        let loanLimit, interestRate, numMonths;
+        if (loanAmount < 40000) {
+          loanLimit = 80000;
+          interestRate = 0.15;
+          numMonths = 4;
+        } else if (loanAmount <= 80000) {
+          loanLimit = 160000;
+          interestRate = 0.2;
+          numMonths = 6;
+        } else if (loanAmount <= 100000) {
+          loanLimit = 200000;
+          interestRate = 0.25;
+          numMonths = 8;
+        } else if (loanAmount <= 150000) {
+          loanLimit = 300000;
+          interestRate = 0.25;
+          numMonths = 12;
+        } else {
+          loanLimit = 400000;
+          interestRate = 0.25;
+          numMonths = 12;
+        }
+
+        const totalInterest = loanAmount * interestRate;
+        const totalPayable = loanAmount + totalInterest;
+        const monthlyInstallment = totalPayable / numMonths;
+        const firstPaymentDate = new Date(
+          new Date().getTime() + 30 * 24 * 60 * 60 * 1000
+        ).toLocaleDateString();
+
+        return {
+          loanAmount: loanAmount.toLocaleString("en-US", {
+            style: "currency",
+            currency: "KES",
+          }),
+          firstPaymentDate,
+          monthlyInstallment: monthlyInstallment.toLocaleString("en-US", {
+            style: "currency",
+            currency: "KES",
+          }),
+          totalInterest: totalInterest.toLocaleString("en-US", {
+            style: "currency",
+            currency: "KES",
+          }),
+          totalPayable: totalPayable.toLocaleString("en-US", {
+            style: "currency",
+            currency: "KES",
+          }),
+        };
+      }
+
+      registrationForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        // Handle registration form submission
+        const formData = new FormData(registrationForm);
+        // Make an API call or handle the form data in the client-side
+        console.log(
+          "Registration form submitted:",
+          Object.fromEntries(formData)
+        );
+        // Display a loading message or update the UI
+        registrationForm.classList.add("hidden");
+        document.getElementById("login-screen").classList.remove("hidden");
+      });
+
+      // Profile screen
+      const saveProfileButton = document.getElementById("save-profile");
+      saveProfileButton.addEventListener("click", () => {
+        // Handle profile picture and ID upload
+        // Make an API call or save the data in the client-side
+        console.log("Profile updated");
+        // Display a success message or update the UI
+      });
+
+      const applyForLoanLink = document.getElementById("apply-for-loan");
+      applyForLoanLink.addEventListener("click", () => {
+        // Display the loan application screen
+        document.getElementById("profile-screen").classList.add("hidden");
+        document
+          .getElementById("loan-application-screen")
+          .classList.remove("hidden");
+      });
+
+      // Apply for loan button click
+      const applyLoanButton = document.getElementById("apply-loan");
+      applyLoanButton.addEventListener("click", () => {
+        // Display loan processing screen
+        document.getElementById("loan-result-screen").classList.add("hidden");
+        document
+          .getElementById("loan-processing-screen")
+          .classList.remove("hidden");
+        // Make an API call to process the loan
+        // ...
+        // After processing, display a success message or update the UI
+      });
+
+      // Share link button click
+      const shareLinkButton = document.getElementById("share-link");
+      shareLinkButton.addEventListener("click", () => {
+        // Implement share functionality (e.g., copy link to clipboard, open share dialog)
+        console.log("Sharing loan details link...");
+      });
+
+      // Function to calculate loan details based on loan amount
+    </script>
+  </body>
+</html>

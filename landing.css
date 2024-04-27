@@ -1,0 +1,132 @@
+body {
+  background: url(../img/form-bg-webp), url(../img/bg-triangle.png),
+    url(../img/form-bg-webp),
+    linear-gradient(to bottom left, #021f99 20%, #ff0000 100%);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 5%;
+  padding: 2%;
+  background-position: left 0px bottom 0px, right 0px top 50%, center top;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Ensures flex items wrap to the next line on smaller screens */
+}
+
+.left-column {
+  flex: 1;
+
+  box-sizing: border-box; /* Ensures padding doesn't add to the width */
+  color: #ffffff;
+}
+
+.icon-description {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.icon-description img {
+  width: 80px; /* Adjust the width of the icon */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Add spacing between the icon and text */
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-container h3,
+.text-container p {
+  margin: 0; /* Reset margin */
+}
+
+.right-column {
+  flex: 1;
+  padding: 20px;
+  border-radius: 15px;
+  padding-left: 40px;
+  box-sizing: border-box; /* Ensures padding doesn't add to the width */
+  background-color: rgb(245, 245, 245);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  color: #070141;
+  margin-top: 1rem;
+}
+.logore {
+  width: 50%;
+  margin-left: 20%;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: calc(100% - 16px); /* Adjusted for padding */
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box; /* Ensures padding doesn't add to the width */
+}
+
+input[type="checkbox"] {
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #070141;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type="submit"]:hover {
+  background-color: #070141;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stacks flex items vertically on smaller screens */
+    margin-top: 1rem;
+  }
+
+  .left-column,
+  .right-column {
+    flex: 1; /* Take full width on smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .right-column {
+    padding-left: 20px; /* Adjust padding for smaller screens */
+  }
+}
+.icon-description {
+  padding: 10px;
+}
+.form-h3 {
+  color: #ff0000;
+  text-align: center;
+}
+.form-p {
+  text-align: center;
+}
+.form-pic {
+  width: 90%;
+  margin-top: 2%;
+  margin-right: 5%;
+  border-radius: 5%;
+}
+.form-h2 {
+  color: #ffffff;
+  margin: 5%;
+}

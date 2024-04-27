@@ -1,0 +1,99 @@
+.row-app {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-6-app {
+  width: 50%;
+}
+
+/* Left column styles */
+.left-column-app {
+  background: url(../img/meto.jpg);
+  height: 100%;
+  padding: 30px;
+  background-size: cover;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.548
+  ); /* Set a semi-transparent background color */
+  background-blend-mode: overlay;
+  background-position: center;
+  /* Added to position the content correctly */
+}
+.left-column-app img {
+  width: 50%;
+}
+.left-column-app h2 {
+  font-size: 40px;
+  color: rgb(255, 0, 0);
+  margin-right: 20%;
+  text-decoration: solid;
+  text-decoration-color: #021f99;
+  text-decoration-thickness: 20%;
+}
+
+.left-column-app ul {
+  list-style: none;
+  padding: 0;
+}
+
+.left-column-app ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: #021f99;
+}
+
+.left-column-app ul li .icon {
+  font-size: 20px;
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+/* Right column styles */
+.right-column-app {
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.right-column-app h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #021f99;
+}
+
+.right-column-app form {
+  font-size: 16px;
+}
+
+.right-column-app form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.right-column-app form input,
+.right-column-app form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.right-column-app form button {
+  background-color: #021f99;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.right-column-app form button:hover {
+  background-color: #555;
+}
